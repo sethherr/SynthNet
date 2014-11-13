@@ -1,0 +1,12 @@
+{
+  "name": "synthnet",
+  "version": "0.0.0",
+  "private": true,
+  "dependencies": {
+    "express": "~4.9.0",
+    "ejs": "latest",
+    "timbre": "latest",
+    "socket.io": "latest",
+    "ip": "latest"
+  }
+}
