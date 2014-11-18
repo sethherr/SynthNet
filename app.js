@@ -1,9 +1,13 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
+app.use(express.static(__dirname + '/public'));
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
 
+
+
 app.get('/', function(req, res){
-  res.sendfile(__dirname + '/index.html');
+  res.sendFile(__dirname + '/index.html');
 });
 
 io.on('connection', function(socket){
@@ -25,13 +29,13 @@ io.on('connection', function(socket){
 
 var ip = require('ip');
 
+var port = 3333;
 
-
-http.listen(3000, function(){
+http.listen(port, function(){
   console.log("\n  ================SynthNet================\n")
   console.log("    Tell people to join your SynthNet at:");
-  console.log("    http://" + ip.address() + ":3000\n");
+  console.log("    http://" + ip.address() + ":" + port + "\n");
   console.log("    Play tones at:");
-  console.log("    http://" + ip.address() + ":3000?maker=true\n");
+  console.log("    http://" + ip.address() + ":" + port + "?maker=true\n");
   console.log("\n  =========================================\n")
 });

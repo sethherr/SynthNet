@@ -5,8 +5,15 @@
   "dependencies": {
     "express": "~4.9.0",
     "ejs": "latest",
-    "timbre": "latest",
-    "socket.io": "latest",
+    "timbre": "~14.10.12",
+    "socket.io": "~1.2.0",
     "ip": "latest"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.10",
+    "gulp-concat": "^2.4.1",
+    "gulp-jshint": "latest",
+    "gulp-strip-debug": "^1.0.1",
+    "gulp-uglify": "^1.0.1"
   }
 }
